@@ -1,7 +1,7 @@
 {
   "name": "grunt-cocoonjs",
   "description": "The grunt plugin for cocoonjs.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/yjx3097890/grunt-cocoonjs",
   "author": {
     "name": "yanjixian",

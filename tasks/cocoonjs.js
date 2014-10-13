@@ -37,11 +37,16 @@ module.exports = function(grunt) {
         done(false);
       }
 
-      var buildPath = 'platforms\android\ant-build';
+      if (options.command === 'build') {
+
+      var buildPath = 'platforms/android/ant-build';
       var files = grunt.file.expand(path.join(options.dir ,buildPath, '*.apk'));
       files.forEach(function (file) {
-        grunt.file.copy(file, options.dist);
+        grunt.file.copy(file, path.join(options.dist, path.basename(file)));
+        grunt.log.writeln('create file ' + file);
       });
+      
+    }
 
       done();
     });

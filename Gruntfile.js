@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp']
+      tests: ['test/dist/']
     },
 
     // Configuration to be run (and then tested).
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
       default_options: {
         options: {
           commond: 'build',
-          dir: './',
-          dist: 'dist'
+          dir: 'test/template/android',
+          dist: 'test/dist'
         }
       }
     },

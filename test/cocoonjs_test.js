@@ -28,11 +28,10 @@ exports.cocoonjs = {
     done();
   },
   default_options: function(test) {
-    // test.expect(1);
-    //
-    // var actual = grunt.file.read('tmp/default_options');
-    // var expected = grunt.file.read('test/expected/default_options');
-    // test.equal(actual, expected, 'should describe what the default behavior is.');
+    test.expect(1);
+
+    var files = grunt.file.expand('test/dist/*.apk');
+    test.ok(files.length > 0, 'dist should have apk files.');
 
     test.done();
   }
